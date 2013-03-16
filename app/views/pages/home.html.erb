@@ -1,0 +1,33 @@
+<% if user_signed_in? %>
+	<h1>Welcome to Andante!</h1>
+	<p>Welcome to the home page of the soon to be best place to rent, and lend musical instruments! <br/> We here at Andante Love making and listening to music and are glad we could join you on your adventure. </p>
+<% else %>
+<div class="hero-unit">
+	<h1>Welcome to "A Company's Webpage"!</h1>
+	<p>
+		You've found the the soon to be Andante home page. This website is under construction. Go to  
+		<%= link_to "our coming soon page", "http://andante.cc" %> 
+			to recieve updates about Andante.
+	</p>
+		<span>
+			<div class="row-fluid">
+				<div class="span6">
+				Give it a Try!!!
+				</div>
+				<div class="span6">
+				Already a user?
+				</div>
+			</div>
+		</span>
+		<span>
+			<div class="row-fluid">
+				<div class="span6">
+				<%= link_to "Sign Up Now!", new_user_registration_path, class: "btn btn-primary btn-large" %>
+				</div>
+				<div class="span6">
+				<%= link_to "Login   ", new_user_session_path, class: "btn btn-primary btn-large" %>
+				</div>
+			</div>
+		</span>
+</div>
+<% end %>
