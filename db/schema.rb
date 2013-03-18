@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130314180515) do
+ActiveRecord::Schema.define(:version => 20130318231020) do
 
   create_table "installs", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
@@ -40,6 +40,8 @@ ActiveRecord::Schema.define(:version => 20130314180515) do
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
+    t.string   "name"
+    t.string   "type"
   end
 
   add_index "instruments", ["user_id"], :name => "index_instruments_on_user_id"
